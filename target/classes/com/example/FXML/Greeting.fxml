@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.GreetingController">
+   <children>
+      <VBox alignment="CENTER" fillWidth="false" maxHeight="809.0" maxWidth="717.0" prefHeight="809.0" prefWidth="715.0" spacing="20.0">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <children>
+            <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="797.0" prefWidth="677.0" style="-fx-background-color: #1b4f72;">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="184.0" prefWidth="636.0">
+                     <children>
+                        <TreeView layoutX="32.0" layoutY="31.0" prefHeight="333.0" prefWidth="611.0" />
+                        <Text fill="#365cf7" layoutX="160.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to LifeBank" wrappingWidth="381.6708984375">
+                           <font>
+                              <Font name="System Bold" size="36.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#1133bc" layoutX="160.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter your pin and yoyr id to continue..." wrappingWidth="333.6708984375" />
+                        <PasswordField fx:id="userPin" layoutX="158.0" layoutY="211.0" />
+                        <Text layoutX="160.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="pin:" />
+                        <Text fill="#1133bc" layoutX="158.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Press enter to contine..." wrappingWidth="164.87451171875" />
+                        <Text layoutX="160.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="id:" wrappingWidth="61.19189453125" />
+                        <PasswordField fx:id="userID" layoutX="158.0" layoutY="263.0" />
+                        <SVGPath fx:id="svg1" content="M20 28.8C10.8 28.8 6.64 20.72 6.48 20.32c-.08-.24-.08-.48 0-.72C6.64 19.28 10.8 11.2 20 11.2s13.36 8.08 13.52 8.48c.08.24.08.48 0 .72-.16.32-4.32 8.4-13.52 8.4zM8.08 20c.88 1.52 4.72 7.2 11.92 7.2s10.96-5.68 11.92-7.2c-.88-1.52-4.72-7.2-11.92-7.2s-10.96 5.68-11.92 7.2zM20 27.2c-4 0-7.2-3.2-7.2-7.2s3.2-7.2 7.2-7.2 7.2 3.2 7.2 7.2-3.2 7.2-7.2 7.2zm0-12.8c-3.12 0-5.6 2.48-5.6 5.6s2.48 5.6 5.6 5.6 5.6-2.48 5.6-5.6-2.48-5.6-5.6-5.6zM20 24c-2.24 0-4-1.76-4-4 0-.48.32-.8.8-.8s.8.32.8.8c0 1.36 1.04 2.4 2.4 2.4s2.4-1.04 2.4-2.4-1.04-2.4-2.4-2.4c-.48 0-.8-.32-.8-.8s.32-.8.8-.8c2.24 0 4 1.76 4 4s-1.76 4-4 4z" fillRule="EVEN_ODD" layoutX="345.0" layoutY="204.0" onMouseClicked="#mouseClicked" />
+                        <SVGPath content="M20 28.8C10.8 28.8 6.64 20.72 6.48 20.32c-.08-.24-.08-.48 0-.72C6.64 19.28 10.8 11.2 20 11.2s13.36 8.08 13.52 8.48c.08.24.08.48 0 .72-.16.32-4.32 8.4-13.52 8.4zM8.08 20c.88 1.52 4.72 7.2 11.92 7.2s10.96-5.68 11.92-7.2c-.88-1.52-4.72-7.2-11.92-7.2s-10.96 5.68-11.92 7.2zM20 27.2c-4 0-7.2-3.2-7.2-7.2s3.2-7.2 7.2-7.2 7.2 3.2 7.2 7.2-3.2 7.2-7.2 7.2zm0-12.8c-3.12 0-5.6 2.48-5.6 5.6s2.48 5.6 5.6 5.6 5.6-2.48 5.6-5.6-2.48-5.6-5.6-5.6zM20 24c-2.24 0-4-1.76-4-4 0-.48.32-.8.8-.8s.8.32.8.8c0 1.36 1.04 2.4 2.4 2.4s2.4-1.04 2.4-2.4-1.04-2.4-2.4-2.4c-.48 0-.8-.32-.8-.8s.32-.8.8-.8c2.24 0 4 1.76 4 4s-1.76 4-4 4z" fillRule="EVEN_ODD" layoutX="345.0" layoutY="258.0" onMouseClicked="#mouseClicked" />
+                        <Text fx:id="errorMessage" fill="#fc0808" layoutX="158.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="187.0" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="402.0" prefWidth="675.0">
+                     <children>
+                        <GridPane hgap="10.0" layoutX="33.0" layoutY="14.0" prefHeight="346.0" prefWidth="620.0" style="-fx-background-color: #1b4f72;" stylesheets="@../css/styles.css" vgap="10.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#handleButton" prefHeight="40.0" prefWidth="80.0" styleClass="buttonNum" text="1" />
+                              <Button mnemonicParsing="false" onAction="#handleButton" prefHeight="40.0" prefWidth="80.0" styleClass="buttonNum" text="2" GridPane.columnIndex="1" />
+                              <Button mnemonicParsing="false" onAction="#handleButton" prefHeight="40.0" prefWidth="80.0" styleClass="buttonNum" text="3" GridPane.columnIndex="2" />
+                              <Button mnemonicParsing="false" prefHeight="47.0" prefWidth="111.0" style="-fx-background-color: e9f806;" styleClass="buttonFun" text="CLEAR" GridPane.columnIndex="3">
+                                 <GridPane.margin>
+                                    <Insets bottom="-60.0" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#handleButton" prefHeight="40.0" prefWidth="80.0" styleClass="buttonNum" text="4" GridPane.rowIndex="1" />
+                              <Button mnemonicParsing="false" onAction="#handleButton" prefHeight="40.0" prefWidth="80.0" styleClass="buttonNum" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Button mnemonicParsing="false" onAction="#handleButton" prefHeight="40.0" prefWidth="80.0" styleClass="buttonNum" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <Button mnemonicParsing="false" onAction="#handleEnter" prefHeight="50.0" prefWidth="111.0" style="-fx-background-color: #22f510;" styleClass="buttonFun" text="ENTER" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="-60.0" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#handleButton" prefHeight="40.0" prefWidth="80.0" styleClass="buttonNum" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Button mnemonicParsing="false" onAction="#handleDelete" prefHeight="51.0" prefWidth="114.0" style="-fx-background-color: f7251b;" styleClass="buttonFun" text="DELETE" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="-60.0" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#handleButton" prefHeight="40.0" prefWidth="80.0" styleClass="buttonNum" text="7" GridPane.rowIndex="2" />
+                              <Button mnemonicParsing="false" onAction="#handleButton" prefHeight="40.0" prefWidth="80.0" styleClass="buttonNum" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <Button mnemonicParsing="false" onAction="#handleButton" prefHeight="40.0" prefWidth="80.0" styleClass="buttonNum" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                           </children>
+                           <padding>
+                              <Insets bottom="-5.0" left="40.0" right="40.0" />
+                           </padding>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

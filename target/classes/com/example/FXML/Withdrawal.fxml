@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+
+<StackPane  xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.WithdrawalController">
+   <children>
+      <VBox alignment="CENTER" fillWidth="false" maxHeight="809.0" maxWidth="717.0" prefHeight="809.0" prefWidth="717.0" spacing="20.0" style="-fx-background-color: #1b4f72;">
+          <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <children>
+            <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="797.0" prefWidth="677.0" style="-fx-background-color: #1b4f72;">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="184.0" prefWidth="636.0">
+                     <children>
+                        <TreeView layoutX="32.0" layoutY="31.0" prefHeight="333.0" prefWidth="611.0" />
+                        <Text fill="#365cf7" layoutX="174.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LifeBank Withdrawal">
+                           <font>
+                              <Font name="System Bold" size="36.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#1133bc" layoutX="129.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter the withdrawal amount:">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="textfield" layoutX="418.0" layoutY="150.0" prefHeight="31.0" prefWidth="152.0">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </TextField>
+                        <Text layoutX="542.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Text>
+                        <CheckBox fx:id="checkBox" layoutX="129.0" layoutY="231.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="303.0" text="I Accept terms and Conditions" textFill="#1133bc">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </CheckBox>
+                        <Text fill="#1133bc" layoutX="129.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Press clear for EXIT" />
+                        <Text fx:id="errorMessage" fill="#f21c1c" layoutX="129.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="262.6708984375">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="358.0" prefWidth="675.0">
+                     <children>
+                        <GridPane hgap="10.0" layoutX="33.0" layoutY="14.0" prefHeight="346.0" prefWidth="620.0" style="-fx-background-color: #1b4f72;" stylesheets="@../css/styles.css" vgap="10.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#handleButton" prefHeight="40.0" prefWidth="80.0" styleClass="buttonNum" text="1" />
+                              <Button mnemonicParsing="false" onAction="#handleButton" prefHeight="40.0" prefWidth="80.0" styleClass="buttonNum" text="2" GridPane.columnIndex="1" />
+                              <Button mnemonicParsing="false" onAction="#handleButton" prefHeight="40.0" prefWidth="80.0" styleClass="buttonNum" text="3" GridPane.columnIndex="2" />
+                              <Button mnemonicParsing="false" onAction="#handleClear" prefHeight="47.0" prefWidth="111.0" style="-fx-background-color: e9f806;" styleClass="buttonFun" text="CLEAR" GridPane.columnIndex="3">
+                                 <GridPane.margin>
+                                    <Insets bottom="-60.0" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#handleButton" prefHeight="40.0" prefWidth="80.0" styleClass="buttonNum" text="4" GridPane.rowIndex="1" />
+                              <Button mnemonicParsing="false" onAction="#handleButton" prefHeight="40.0" prefWidth="80.0" styleClass="buttonNum" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Button mnemonicParsing="false" onAction="#handleButton" prefHeight="40.0" prefWidth="80.0" styleClass="buttonNum" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <Button mnemonicParsing="false" onAction="#handleEnter" prefHeight="50.0" prefWidth="111.0" style="-fx-background-color: #22f510;" styleClass="buttonFun" text="ENTER" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="-60.0" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#handleButton" prefHeight="40.0" prefWidth="80.0" styleClass="buttonNum" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Button mnemonicParsing="false" onAction="#handleDelete" prefHeight="51.0" prefWidth="114.0" style="-fx-background-color: f7251b;" styleClass="buttonFun" text="DELETE" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="-60.0" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#handleButton" prefHeight="40.0" prefWidth="80.0" styleClass="buttonNum" text="7" GridPane.rowIndex="2" />
+                              <Button mnemonicParsing="false" onAction="#handleButton" prefHeight="40.0" prefWidth="80.0" styleClass="buttonNum" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <Button mnemonicParsing="false" onAction="#handleButton" prefHeight="40.0" prefWidth="80.0" styleClass="buttonNum" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                           </children>
+                           <padding>
+                              <Insets bottom="-5.0" left="40.0" right="40.0" />
+                           </padding>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </VBox>
+   </children>
+</StackPane>
